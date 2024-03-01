@@ -70,3 +70,11 @@ z-index: -1;
 background-position: cover;
 opacity: 0.2;
 }
+#aboutMe{
+    position: absolute;
+    left: 40%;
+    bottom: 60%;
+    font-size: larger;
+    border: 1px solid maroon;
+    border-radius: 2px;
+}
