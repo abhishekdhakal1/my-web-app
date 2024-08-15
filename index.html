@@ -13,54 +13,86 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="src/my.jpg" />
     <link rel="stylesheet" href="style.css" />
-    <title>Abhishek</title>
+    <title>Abhishek Dhakal - Portfolio</title>
   </head>
   <body>
     <div class="main">
-      <video autoplay muted loop class="vid" height="100%" width="100%">
-        <source src="src/avid.mp4" />
-        <source src="avid.WebM" />
+      <nav class="nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/aboutme" class="nav-link">About Me</a>
+        <a href="/contact" class="nav-link">Contact</a>
+      </nav>
 
-        Error
-      </video>
-      <div class="nav">
-        <a href="#"><button class="nav1">Home</button></a>
-        <a href="#"><button id="about" class="nav1">About me</button></a>
-        <a href="#"><button class="nav1">Contact</button></a>
-      </div>
-      <div class="intro">
-        <div class="intro1">
-          <br /><br />
+      <section id="home" class="section">
+        <div class="intro">
           <h1>Welcome</h1>
-          <br />
-          <br /><br />
-          <h4>
-            <p>NaN</p>
-            My academics pursuits
-            <span
-              >nothing....</span
-            >
-          </h4>
+          <p class="animated-text">
+            Hi, I’m Abhishek. I’m a continuous learner and innovator.
+          </p>
+          <p>
+            Hi, I'm <span>Abhishek Dhakal</span>, an Electronics and
+            Communication student with a passion for technology and innovation.
+          </p>
+          <p>
+            Currently pursuing my Bachelor's in Electronics, Communication, and
+            Information Engineering, focusing on web development and exploring
+            the world of embedded systems.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <div class="footer">
-        <p id="web">
-          Lorem
+      <section id="aboutme" class="section">
+        <h2>About Me</h2>
+        <p>
+          I'm a second-semester student keen on learning web technologies,
+          especially React.js and Next.js. My interests also include diving into
+          machine learning and applying AI techniques to solve real-world
+          problems.
         </p>
-        <br /><br />
+        <p>
+          In my free time, I work on personal projects, continuously honing my
+          coding skills and exploring new tools like Tailwind CSS.
+        </p>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/{your-form-id}" method="POST">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p>
+            <i class="fa-solid fa-location-pin"></i> Gaindakot, Nawalpur, Nepal
+          </p>
+          <p><i class="fa-solid fa-phone"></i> +977 9864569197</p>
+          <p>
+            <i class="fa-solid fa-envelope"></i> abhishekdhakal1826@gmail.com
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p id="web">Get in Touch</p>
+        <br />
         <a
           href="https://www.facebook.com/avishekdhakal.26"
           target="_blank"
           class="fa-brands fa-facebook"
         ></a>
-        &copy;All right reserved
-      </div>
+        &copy; 2024 All rights reserved
+      </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
