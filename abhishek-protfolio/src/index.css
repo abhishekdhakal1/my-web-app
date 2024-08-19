@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply font-sans text-base text-gray-800;
+}
+
+.main {
+  @apply min-h-screen flex flex-col bg-[linear-gradient(to_right,_#db9c58,_#f4a261)] animate-backgroundChange;
+}
