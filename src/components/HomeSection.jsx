@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Terminal from "./Terminal"; // Adjust the import path as necessary
+import Terminal from "./Terminal";
 
 function HomeSection() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
