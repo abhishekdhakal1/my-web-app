@@ -6,8 +6,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'orangered': '#db9c58',
-        'darkred': '#f4a261',
+        'terminal-bg': '#000000',
+        'terminal-text': '#00ff00', 
+      },
+      fontFamily: {
+        mono: ['Courier New', 'monospace'],
       },
       keyframes: {
         typing: {
@@ -34,8 +37,22 @@ export default {
         backgroundChange: 'backgroundChange 4s infinite',
         fadeInOut: 'fadeInOut 2s infinite',
       },
-      fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+      },
+      boxShadow: {
+        'terminal': '0 4px 8px rgba(0, 0, 0, 0.7)', // Custom shadow for terminal
+        'btn': '0 2px 4px rgba(0, 0, 0, 0.3)', // Custom shadow for buttons
+      },
+      transitionProperty: {
+        'width': 'width', // Custom transition for width changes
+        'height': 'height', // Custom transition for height changes
+      },
+      transitionDuration: {
+        '400': '400ms', // Custom duration for transitions
+        '600': '600ms',
       },
     },
   },
