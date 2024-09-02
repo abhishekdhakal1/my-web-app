@@ -12,7 +12,7 @@ function HomeSection() {
       >
         <h1 className="text-4xl font-bold mb-4">Welcome</h1>
         <p className="text-xl text-red-600 mb-4 animate-fadeInOut">
-          Hi, I’m Abhishek. I’m a continuous learner and innovator.
+          Hi, I'm Abhishek. I'm a continuous learner and innovator.
         </p>
         <p className="text-lg mb-2">
           Hi, I'm <span className="text-red-500">Abhishek Dhakal</span>, an
