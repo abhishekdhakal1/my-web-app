@@ -10,8 +10,7 @@ function AboutMeSection() {
         <p className="text-lg mb-6">
           Hello! I'm Abhishek Dhakal, a student pursuing a Bachelor's degree in
           Electronics, Communication, and Information Engineering at the
-          Institute of Engineering (IOE), Thapathali Campus. I am expected to
-          graduate in 2027.
+          Institute of Engineering (IOE), Thapathali Campus. First Year.
         </p>
         <h3 className="text-2xl font-semibold mb-2 text-orange-700">
           Education
