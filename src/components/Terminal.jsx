@@ -25,14 +25,14 @@ function Terminal({ onClose }) {
         response = `
           Available commands:
           - help: Show this help message
-          - aboutme: Navigate to the About page
+          - about: Navigate to the About page
           - contact: Navigate to the Contact page
           - /: Navigate to the Home page
           - clear: Clear the terminal screen
         `;
         break;
-      case "aboutme":
-        navigate("/about");
+      case "about":
+        navigate("/aboutme");
         return;
       case "contact":
         navigate("/contact");
