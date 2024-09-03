@@ -19,7 +19,6 @@ function Terminal({ onClose }) {
 
   const processCommand = (command) => {
     let response = "";
-    let responseColor = "text-yellow-300";
     switch (command.trim().toLowerCase()) {
       case "help":
         response = `
@@ -40,14 +39,16 @@ function Terminal({ onClose }) {
       case "/":
         navigate("/");
         return;
+      case "cls":
+        setOutput([]);
+        return;
       case "clear":
         setOutput([]);
         return;
       default:
-        response = "Unknown command. Type `help` for a list of commands.";
-        responseColor = "text-red-600";
+        response = `${command} is not a command. Type help for a list of commands.`;
     }
-    setOutput((prevOutput) => [...prevOutput, `> ${command}`, response]);
+    setOutput((prevOutput) => [...prevOutput, `>> ${command}`, response]);
   };
 
   return (
