@@ -1,8 +1,13 @@
-# React + Vite
+# My Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React website built with Vite. It features a modern design, interactive components, and dynamic routing.
+ ## About Me
 
-Currently, two official plugins are available:
+I'm Abhishek Dhakal, a student pursuing a degree in Electronics, Communication, and Information Engineering. I have a passion for web development, particularly in React and Next.js. I'm currently working on various projects to enhance my skills and build interactive and user-friendly web applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out my work and feel free to connect with me for collaboration or any inquiries!
+
+## Getting Started
+
+1. Clone the repository:  
+   `git clone https://github.com/abhishekdhakal1/my-web-app`
