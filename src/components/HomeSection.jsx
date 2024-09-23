@@ -16,9 +16,9 @@ function HomeSection() {
         </p>
         <button
           onClick={() => setIsTerminalOpen(true)}
-          className="absolute bottom-5 right-5 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="absolute bottom-5 font-semibold right-5 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
         >
-          Help
+        {`>Help`}
         </button>
       </section>
       {isTerminalOpen && <Terminal onClose={() => setIsTerminalOpen(false)} />}

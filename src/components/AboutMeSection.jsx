@@ -31,8 +31,8 @@ function AboutMeSection() {
             and working with frameworks and libraries.
           </li>
           <li>
-            <strong>React, Express, Node.js:</strong> Developing full-stack
-            applications with React, Express, and Node.js.
+            <strong>React, Express, Node:</strong> Developing full-stack
+            applications with React, Express, and Node.
           </li>
           <li>
             <strong>C++:</strong> Object-oriented programming and algorithm
