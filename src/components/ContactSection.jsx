@@ -10,7 +10,7 @@ function Contact() {
         <div className="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
           <h2 className="text-2xl font-bold mb-4">Page Available Soon</h2>
           <p className="text-lg mb-4 font-semibold">
-            Be Patinet
+            Be Patient
           </p>
         </div>
       </div>
