@@ -6,7 +6,7 @@ function NavBar() {
   const activePage = location.pathname;
 
   return (
-    <nav className="flex justify-center bg-gray-800 p-2">
+    <nav className="flex justify-center bg-gray-800 p-2 animate-zoomIn">
       <Link
         to="/"
         className={`text-lg font-medium px-4 py-2 rounded ${
