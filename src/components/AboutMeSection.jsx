@@ -1,5 +1,4 @@
 import React from "react";
-import image1 from "../photo/img1.jpg";
 
 const AboutMeSection = () => {
   return (
@@ -59,7 +58,7 @@ const AboutMeSection = () => {
       <div className="mt-8 md:mt-0 md:w-1/3">
         <img
           className="rounded-lg shadow-md object-cover w-full"
-          src={image1}
+          src=""
           alt="Abhishek Dhakal"
         />
       </div>
