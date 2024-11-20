@@ -1,51 +1,70 @@
 import React from "react";
+import image1 from "../photo/img1.jpg"
 
-function AboutMeSection() {
+const AboutMeSection = () => {
   return (
-    <section className="flex items-center justify-center min-h-screen bg-gray-800 text-white p-5">
-      <div className="bg-gray-900 p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-        <h2 className="text-4xl font-extrabold mb-4 text-orange-700">
-          About Me
-        </h2>
-        <p className="text-lg mb-6">
-          Hello! I'm Abhishek Dhakal, a student pursuing a Bachelor's degree in
-          Electronics, Communication, and Information Engineering at the
-          Institute of Engineering (IOE), Thapathali Campus. Second Year.
+    <section className="bg-gray-800 flex flex-col md:flex-row items-center justify-between p-8 md:p-16 rounded-lg shadow-lg">
+      <div className="md:w-2/3 text-white">
+        <h1 className="text-4xl font-bold mb-4">
+          <span className="text-orange-700">—</span> A Frontend Developer.
+          <br />
+          Problem Solver.
+        </h1>
+        <p className="text-lg mb-4">
+          Hi! I'm Abhishek Dhakal, a second-year student pursuing a Bachelor's
+          in Electronics, Communication, and Information Engineering at IOE,
+          Thapathali Campus.
         </p>
-        <h3 className="text-2xl font-semibold mb-2 text-orange-700">
+        <p className="text-lg mb-4">
+          I specialize in creating clean, responsive designs and seamless user
+          experiences using React and Tailwind CSS.
+        </p>
+        <h2 className="text-2xl font-semibold mb-2 text-orange-700">Skills</h2>
+        <ul className="list-disc list-inside space-y-2 mb-4">
+          <li>
+            <strong>JavaScript:</strong> Proficient in building dynamic and
+            interactive web applications.
+          </li>
+          <li>
+            <strong>React:</strong> Expertise in developing frontend user
+            interfaces and single-page applications.
+          </li>
+          <li>
+            <strong>Node.js & Express:</strong> Skilled in building backend APIs
+            and full-stack applications.
+          </li>
+          <li>
+            <strong>C++:</strong> Knowledge of object-oriented programming and
+            algorithms.
+          </li>
+          <li>
+            <strong>C:</strong> Experienced in system programming and file
+            handling.
+          </li>
+        </ul>
+        <h2 className="text-2xl font-semibold mb-2 text-orange-700">
           Education
-        </h3>
-        <p className="mb-4">
+        </h2>
+        <p className="text-lg">
           <strong>
-            Bachelor in Electronics, Communication, and Information Engineering
+            Bachelor's in Electronics, Communication, and Information
+            Engineering
           </strong>
           <br />
           Institute of Engineering (IOE), Thapathali Campus
           <br />
           Expected Graduation: 2027
         </p>
-        <h3 className="text-2xl font-semibold mb-2 text-orange-700">Skills</h3>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>JavaScript:</strong> Building interactive web applications
-            and working with frameworks and libraries.
-          </li>
-          <li>
-            <strong>React, Express, Node:</strong> Developing full-stack
-            applications with React, Express, and Node.
-          </li>
-          <li>
-            <strong>C++:</strong> Object-oriented programming and algorithm
-            design.
-          </li>
-          <li>
-            <strong>C:</strong> System programming, file handling, and data
-            structures.
-          </li>
-        </ul>
+      </div>
+      <div className="mt-8 md:mt-0 md:w-1/3">
+        <img
+          className="rounded-lg shadow-md object-cover w-full"
+          src={image1}
+          alt="Abhishek Dhakal"
+        />
       </div>
     </section>
   );
-}
+};
 
 export default AboutMeSection;
