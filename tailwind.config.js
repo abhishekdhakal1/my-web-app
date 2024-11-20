@@ -11,6 +11,7 @@ export default {
       },
       fontFamily: {
         mono: ['Courier New', 'monospace'],
+        ubuntu: ['Ubuntu', 'san-serif'],
       },
       keyframes: {
         typing: {

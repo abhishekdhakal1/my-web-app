@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomeSection from "./components/HomeSection";
@@ -6,8 +6,23 @@ import AboutMeSection from "./components/AboutMeSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import "./index.css";
+import Loader from "./components/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
+
+  if (loading) {
+    return (
+      <>
+        <Loader />
+      </>
+    );
+  }
+
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-gray-800 text-white">
