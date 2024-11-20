@@ -5,21 +5,26 @@ function HomeSection() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-gray-800 text-white">
+    <div className="relative min-h-screen bg-gray-800 text-white flex items-center justify-center">
       <section
         id="home"
-        className="flex flex-col items-center justify-center p-5 text-center"
+        className="flex flex-col md:flex-row items-center justify-between p-8 md:p-16 text-center md:text-left w-full max-w-5xl"
       >
-        <h1 className="text-4xl font-bold mb-4 animate-zoomIn">Welcome</h1>
-        <p className="text-2xl text-red-600 mb-4 animate-zoomIn">
-          Let's get connected!
-        </p>
-        <button
-          onClick={() => setIsTerminalOpen(true)}
-          className="absolute bottom-5 font-semibold right-5 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-        >
-        {`>Help`}
-        </button>
+        <div className="md:w-2/3 animate-zoomIn">
+          <h1 className="text-5xl font-bold mb-6">
+            Hello, I'm <span className="text-orange-700">Abhishek Dhakal</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-6">
+            Let's build something exceptional together!
+          </p>
+
+          <button
+            onClick={() => setIsTerminalOpen(true)}
+            className="font-semibold px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition duration-300"
+          >
+            {`> Help`}
+          </button>
+        </div>
       </section>
       {isTerminalOpen && <Terminal onClose={() => setIsTerminalOpen(false)} />}
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMeSection = () => {
   return (
-    <section className="bg-gray-800 flex flex-col md:flex-row items-center justify-between p-8 md:p-16 rounded-lg shadow-lg">
+    <section className="bg-gray-800 flex flex-col md:flex-row items-center justify-between p-8 md:p-16 rounded-lg shadow-lg animate-zoomIn">
       <div className="md:w-2/3 text-white">
         <h1 className="text-4xl font-bold mb-4">
           <span className="text-orange-700">—</span> A Frontend Developer.
@@ -54,13 +54,6 @@ const AboutMeSection = () => {
           <br />
           Expected Graduation: 2027
         </p>
-      </div>
-      <div className="mt-8 md:mt-0 md:w-1/3">
-        <img
-          className="rounded-lg shadow-md object-cover w-full"
-          src=""
-          alt="Abhishek Dhakal"
-        />
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="relative min-h-screen bg-gray-800 text-white flex items-center justify-center"
+      className="relative min-h-screen bg-gray-800 text-white flex items-center justify-center animate-zoomIn"
     >
       <div className="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
         <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
