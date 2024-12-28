@@ -7,6 +7,8 @@ function Terminal({ onClose }) {
   const [output, setOutput] = useState([
     "Welcome to the interactive terminal! Type `help` for a list of commands.",
   ]);
+  const [commandHistory, setCommandHistory] = useState([]);
+  const [historyIndex, setHistoryIndex] = useState(-1);
 
   const navigate = useNavigate();
 
@@ -14,6 +16,19 @@ function Terminal({ onClose }) {
     if (e.key === "Enter") {
       processCommand(input);
       setInput("");
+    } else if (e.key === "ArrowUp") {
+      if (historyIndex > 0) {
+        setHistoryIndex(historyIndex - 1);
+        setInput(commandHistory[historyIndex - 1]);
+      }
+    } else if (e.key === "ArrowDown") {
+      if (historyIndex < commandHistory.length - 1) {
+        setHistoryIndex(historyIndex + 1);
+        setInput(commandHistory[historyIndex + 1]);
+      } else {
+        setHistoryIndex(commandHistory.length);
+        setInput("");
+      }
     }
   };
 
@@ -49,6 +64,9 @@ function Terminal({ onClose }) {
         response = `${command} is not a command. Type help for a list of commands.`;
     }
     setOutput((prevOutput) => [...prevOutput, `>> ${command}`, response]);
+
+    setCommandHistory((prevHistory) => [...prevHistory, command]);
+    setHistoryIndex(commandHistory.length);
   };
 
   return (
@@ -57,7 +75,7 @@ function Terminal({ onClose }) {
         <div className="flex items-center justify-between p-2 bg-gray-800 rounded-t-lg">
           <button
             onClick={() => onClose()}
-            className="p-2 text-red-600 hover:text-red-500"
+            className="p-2 text-orange-600 hover:text-orange-500"
           >
             <FaTimes />
           </button>
