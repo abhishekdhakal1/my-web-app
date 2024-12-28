@@ -10,7 +10,7 @@ function AboutMeSection() {
   };
 
   return (
-    <section className="bg-gray-800 flex flex-col md:flex-row items-center justify-between p-8 md:p-16 rounded-lg shadow-lg animate-fadeIn">
+    <section className="bg-gray-800 flex flex-col md:flex-row items-center justify-between p-8 md:p-16 rounded-lg shadow-lg animate-zoomIn">
       <div className="md:w-2/3 text-white space-y-6">
         <h1 className="text-4xl font-bold mb-4">
           <span className="text-orange-700">—</span> A Frontend Developer.{" "}
