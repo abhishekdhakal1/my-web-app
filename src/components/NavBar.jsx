@@ -28,14 +28,14 @@ function NavBar() {
         About Me
       </Link>
       <Link
-        to="/contact"
+        to="/project"
         className={`text-lg font-medium px-4 py-2 rounded ${
-          activePage === "/contact"
+          activePage === "/project"
             ? "text-orange-500"
             : "text-white hover:text-orange-500"
         }`}
       >
-        Contact
+        Project
       </Link>
     </nav>
   );

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import HomeSection from "./components/HomeSection";
 import AboutMeSection from "./components/AboutMeSection";
-import ContactSection from "./components/ContactSection";
+import Project from "./components/Project";
 import Footer from "./components/Footer";
 import "./index.css";
 import Loader from "./components/Loader";
@@ -31,7 +31,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeSection />} />
             <Route path="/aboutme" element={<AboutMeSection />} />
-            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/project" element={<Project />} />
           </Routes>
         </main>
         <Footer />

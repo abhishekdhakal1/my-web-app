@@ -40,7 +40,7 @@ function Terminal({ onClose }) {
           Available commands:
           - help: Show this help message
           - about: Navigate to the About page
-          - contact: Navigate to the Contact page
+          - project: Navigate to the Project page
           - /: Navigate to the Home page
           - clear: Clear the terminal screen
         `;
@@ -48,8 +48,8 @@ function Terminal({ onClose }) {
       case "about":
         navigate("/aboutme");
         return;
-      case "contact":
-        navigate("/contact");
+      case "project":
+        navigate("/project");
         return;
       case "/":
         navigate("/");
