@@ -7,7 +7,7 @@ function Project() {
       id="project"
       className="min-h-screen bg-gray-800 text-white flex items-start justify-start animate-zoomIn"
     >
-      <div className="bg-gray-900 p-4 rounded-lg shadow-lg text-center w-1/3 sm:w-1/4 md:w-1/5 flex flex-col items-center justify-start mt-16 ml-4"> {/* Using flex and adding margin-top to position it below the navbar */}
+      <div className="bg-gray-900 p-4 rounded-lg shadow-lg text-center w-1/3 sm:w-1/4 md:w-1/5 flex flex-col items-center justify-start mt-16 ml-4">
         <h3 className="text-lg font-semibold mb-2">Tic Tac Toe</h3>
         <img
           src={thumbnail}
