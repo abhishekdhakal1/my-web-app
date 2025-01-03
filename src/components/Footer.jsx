@@ -29,7 +29,9 @@ function Footer() {
           <FaGithub />
         </a>
       </div>
-      <p className="text-sm">&copy; 2024 All rights reserved</p>
+      <p className="text-sm">
+        &copy; {new Date().getFullYear()} All rights reserved
+      </p>
     </footer>
   );
 }
