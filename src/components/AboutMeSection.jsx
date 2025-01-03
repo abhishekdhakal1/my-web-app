@@ -4,7 +4,7 @@ import profilePic from "../assets/ad.jpg";
 
 function AboutMeSection() {
   const [language, setLanguage] = useState("en");
-  const [toggleState, setToggleState] = useState(false);
+  const [toggleState, setToggleState] = useState(true);
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === "en" ? "de" : "en"));
