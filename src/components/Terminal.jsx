@@ -20,7 +20,6 @@ function Terminal({ onClose }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Scroll to bottom of terminal
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }

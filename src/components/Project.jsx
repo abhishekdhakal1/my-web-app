@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaGamepad, FaLink, FaGithub } from "react-icons/fa";
 import thumbnail from "../assets/dwnld.png";
 
@@ -9,35 +9,34 @@ function ProjectSection() {
       description: "Interactive browser-based Tic Tac Toe game",
       thumbnail: thumbnail,
       liveLink: "https://tic-tac-toe-wine-six.vercel.app/",
-      githubLink: "https://github.com/abhishekdhakal1/tic-tac-toe"
-    }
-    // Add more projects here
+      githubLink: "https://github.com/abhishekdhakal1/tic-tac-toe",
+    },
   ];
 
   return (
-    <section 
+    <section
       id="projects"
-      className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16"
+      className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 mt-6"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
           My Projects
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-gray-800 rounded-lg shadow-2xl overflow-hidden transform transition hover:scale-105"
             >
               <div className="relative">
                 <img
                   src={project.thumbnail}
                   alt={`${project.title} Thumbnail`}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-cover object-top"
                 />
                 <div className="absolute top-4 right-4 flex space-x-2">
-                  <a 
+                  <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -45,7 +44,7 @@ function ProjectSection() {
                   >
                     <FaLink className="text-white" />
                   </a>
-                  <a 
+                  <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -55,14 +54,12 @@ function ProjectSection() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-blue-500 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4">
-                  {project.description}
-                </p>
+                <p className="text-gray-300 mb-4">{project.description}</p>
                 <a
                   href={project.liveLink}
                   target="_blank"

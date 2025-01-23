@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { 
-  FaReact, 
-  FaNodeJs, 
-  FaDocker, 
+import React, { useState } from "react";
+import {
+  FaReact,
+  FaNodeJs,
+  FaDocker,
   FaLinkedin,
   FaGithub,
-  FaEnvelope
+  FaEnvelope,
 } from "react-icons/fa";
-import { 
-  SiTypescript, 
-  SiNextdotjs, 
-  SiKubernetes, 
-  SiMongodb, 
-  SiPostgresql
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiKubernetes,
+  SiMongodb,
+  SiPostgresql,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa6";
-import profilePic from '../assets/ad.jpg'; // Ensure you have a profile picture
+import profilePic from "../assets/ad.jpg";
 
 function AboutMeSection() {
   const [language, setLanguage] = useState("en");
@@ -23,20 +23,22 @@ function AboutMeSection() {
   const content = {
     en: {
       heading: "Software Engineer & Tech Innovator",
-      introduction: "Transforming ideas into scalable digital solutions with cutting-edge technologies.",
+      introduction:
+        "Transforming ideas into scalable digital solutions with cutting-edge technologies.",
       skillsTitle: "Technology Stack",
       timelineTitle: "Professional Journey",
       contactTitle: "Connect With Me",
-      contactButton: "Get In Touch"
+      contactButton: "Get In Touch",
     },
     de: {
       heading: "Software-Entwickler & Tech-Innovator",
-      introduction: "Umwandlung von Ideen in skalierbare digitale Lösungen mit modernsten Technologien.",
+      introduction:
+        "Umwandlung von Ideen in skalierbare digitale Lösungen mit modernsten Technologien.",
       skillsTitle: "Technologie-Stack",
       timelineTitle: "Beruflicher Weg",
       contactTitle: "Kontaktieren Sie mich",
-      contactButton: "Kontakt aufnehmen"
-    }
+      contactButton: "Kontakt aufnehmen",
+    },
   };
 
   const technologies = [
@@ -55,37 +57,52 @@ function AboutMeSection() {
     {
       date: "2022",
       title: "Engineering Initiation",
-      description: "Commenced Bachelor's in Electronics and Information Engineering"
+      description:
+        "Commenced Bachelor's in Electronics and Information Engineering in IOE",
     },
     {
       date: "2023",
-      title: "Web Development Mastery",
-      description: "Advanced React skills, building complex web applications"
+      title: "Web Development Mastery Frontend",
+      description:
+        "Advanced React skills, building complex web applications particullary Frontend",
     },
     {
       date: "2024",
-      title: "Cloud & DevOps Focus",
-      description: "Deep dive into cloud technologies and DevOps practices"
-    }
+      title: "Full Stack Web Development Cloud & DevOps Focus along",
+      description:
+        "Deep dive into MERN stack along with cloud technologies and DevOps practices",
+    },
   ];
 
   const socialLinks = [
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/abhishekdhakal1/", color: "text-blue-500" },
-    { icon: FaGithub, url: "https://github.com/abhishekdhakal1", color: "text-gray-200" },
-    { icon: FaEnvelope, url: "mailto:abhishekdhakal1826@gmail.com", color: "text-red-500" }
+    {
+      icon: FaLinkedin,
+      url: "https://www.linkedin.com/in/abhishekdhakal1/",
+      color: "text-blue-500",
+    },
+    {
+      icon: FaGithub,
+      url: "https://github.com/abhishekdhakal1",
+      color: "text-gray-200",
+    },
+    {
+      icon: FaEnvelope,
+      url: "mailto:abhishekdhakal1826@gmail.com",
+      color: "text-red-500",
+    },
   ];
 
   return (
-    <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen p-6 md:p-12 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 text-white min-h-screen p-6 md:p-12 overflow-hidden mt-16">
       <div className="absolute top-4 right-4 z-10">
         <div className="flex space-x-2">
-          {['en', 'de'].map(lang => (
-            <button 
+          {["en", "de"].map((lang) => (
+            <button
               key={lang}
-              onClick={() => setLanguage(lang)} 
+              onClick={() => setLanguage(lang)}
               className={`px-3 py-1 rounded-full text-sm transition ${
-                language === lang 
-                  ? "bg-blue-600 text-white" 
+                language === lang
+                  ? "bg-blue-600 text-white"
                   : "bg-gray-700 text-gray-300 hover:bg-gray-600"
               }`}
             >
@@ -107,17 +124,17 @@ function AboutMeSection() {
           </div>
           <div className="flex justify-center">
             <div className="relative group">
-              <img 
-                src={profilePic} 
-                alt="Profile" 
+              <img
+                src={profilePic}
+                alt="Profile"
                 className="rounded-full w-48 md:w-64 h-48 md:h-64 object-top object-cover border-4 border-blue-500 transition transform group-hover:scale-105 group-hover:rotate-3"
               />
               <div className="absolute bottom-0 right-0 flex space-x-2">
                 {socialLinks.map((social, index) => (
-                  <a 
-                    key={index} 
-                    href={social.url} 
-                    target="_blank" 
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={`${social.color} text-xl md:text-2xl hover:opacity-75 transition transform hover:scale-125`}
                   >
@@ -129,7 +146,6 @@ function AboutMeSection() {
           </div>
         </div>
 
-        
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-semibold text-blue-500 mb-6">
@@ -137,12 +153,14 @@ function AboutMeSection() {
             </h2>
             <div className="grid grid-cols-3 gap-4">
               {technologies.map((tech, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex flex-col items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 hover:scale-105 transition transform"
                 >
                   <tech.icon className="text-3xl md:text-4xl text-blue-500 mb-2" />
-                  <span className="text-xs md:text-sm text-center">{tech.name}</span>
+                  <span className="text-xs md:text-sm text-center">
+                    {tech.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -154,12 +172,16 @@ function AboutMeSection() {
             </h2>
             <div className="space-y-4">
               {timeline.map((item, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="border-l-4 border-blue-500 pl-4 py-3 hover:bg-gray-800 transition rounded-r-lg"
                 >
-                  <h3 className="text-xl font-bold text-blue-500">{item.date}</h3>
-                  <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+                  <h3 className="text-xl font-bold text-blue-500">
+                    {item.date}
+                  </h3>
+                  <h4 className="text-lg font-semibold text-white">
+                    {item.title}
+                  </h4>
                   <p className="text-gray-400 text-sm">{item.description}</p>
                 </div>
               ))}
@@ -167,7 +189,6 @@ function AboutMeSection() {
           </div>
         </div>
 
-       
         <div className="text-center mt-16">
           <h2 className="text-3xl font-semibold text-blue-500 mb-6">
             {content[language].contactTitle}

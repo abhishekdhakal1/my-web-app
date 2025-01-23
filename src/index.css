@@ -8,5 +8,4 @@ body {
 
 .main {
   @apply min-h-screen flex flex-col bg-gradient-to-r from-yellow-400 via-orange-300 to-yellow-400;
-  @apply animate-backgroundChange;
 }
