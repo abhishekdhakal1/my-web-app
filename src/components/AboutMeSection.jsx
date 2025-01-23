@@ -127,7 +127,7 @@ function AboutMeSection() {
               <img
                 src={profilePic}
                 alt="Profile"
-                className="rounded-full w-48 md:w-64 h-48 md:h-64 object-top object-cover border-4 border-blue-500 transition transform group-hover:scale-105 group-hover:rotate-3"
+                className="m-3 rounded-full w-48 md:w-64 h-48 md:h-64 object-top object-cover border-4 border-red-100 transition transform group-hover:scale-105 group-hover:rotate-3"
               />
               <div className="absolute bottom-0 right-0 flex space-x-2">
                 {socialLinks.map((social, index) => (
