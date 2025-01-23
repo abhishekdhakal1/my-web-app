@@ -1,31 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
+import { FaGamepad, FaLink, FaGithub } from "react-icons/fa";
 import thumbnail from "../assets/dwnld.png";
 
-function Project() {
+function ProjectSection() {
+  const projects = [
+    {
+      title: "Tic Tac Toe",
+      description: "Interactive browser-based Tic Tac Toe game",
+      thumbnail: thumbnail,
+      liveLink: "https://tic-tac-toe-wine-six.vercel.app/",
+      githubLink: "https://github.com/abhishekdhakal1/tic-tac-toe"
+    }
+    // Add more projects here
+  ];
+
   return (
-    <section
-      id="project"
-      className="min-h-screen bg-gray-800 text-white flex items-start justify-start animate-zoomIn"
+    <section 
+      id="projects"
+      className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16"
     >
-      <div className="bg-gray-900 p-4 rounded-lg shadow-lg text-center w-1/3 sm:w-1/4 md:w-1/5 flex flex-col items-center justify-start mt-16 ml-4">
-        <h3 className="text-lg font-semibold mb-2">Tic Tac Toe</h3>
-        <img
-          src={thumbnail}
-          alt="Project Thumbnail"
-          className="w-3/4 h-auto mx-auto rounded mb-3"
-        />
-        <p className="text-sm mb-3">Want to play TTC</p>
-        <a
-          href="https://tic-tac-toe-wine-six.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded"
-        >
-          Play
-        </a>
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
+          My Projects
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div 
+              key={index} 
+              className="bg-gray-800 rounded-lg shadow-2xl overflow-hidden transform transition hover:scale-105"
+            >
+              <div className="relative">
+                <img
+                  src={project.thumbnail}
+                  alt={`${project.title} Thumbnail`}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4 flex space-x-2">
+                  <a 
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 p-2 rounded-full hover:bg-blue-700 transition"
+                  >
+                    <FaLink className="text-white" />
+                  </a>
+                  <a 
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition"
+                  >
+                    <FaGithub className="text-white" />
+                  </a>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold text-blue-500 mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {project.description}
+                </p>
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition"
+                >
+                  <FaGamepad />
+                  Play Project
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
-export default Project;
+export default ProjectSection;
