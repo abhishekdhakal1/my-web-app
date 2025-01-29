@@ -49,7 +49,7 @@ function Footer() {
         <div className="text-center">
           <p className="text-sm text-gray-400 mb-2">
             &copy; {new Date().getFullYear()} Abhishek Dhakal. All Rights
-            Reserveds.
+            Reserved.
           </p>
           <p className="text-xs text-gray-500">
             Crafted with passion and precision
